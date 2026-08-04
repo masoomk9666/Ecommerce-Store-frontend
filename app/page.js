@@ -5,6 +5,7 @@ import { products } from '@/data/products'
 import ProductCard from '@/components/common/ProductCard'
 import { ArrowRight, Truck, Shield, Star, Clock } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function HomePage() {
   const [isMounted, setIsMounted] = useState(false)
@@ -171,9 +172,9 @@ export default function HomePage() {
       <section className="mb-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold tracking-tight">Featured</h2>
-          <button className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
+          <Link href="/category/all" className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
             View All <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {featured.map(product => (
@@ -186,9 +187,9 @@ export default function HomePage() {
       <section className="mb-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold tracking-tight">Best Sellers</h2>
-          <button className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
+          <Link href="/category/all" className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
             View All <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {bestSellers.map(product => (
@@ -201,9 +202,9 @@ export default function HomePage() {
       <section className="mb-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold tracking-tight">New Arrivals</h2>
-          <button className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
+          <Link href="/category/all" className="text-sm font-medium hover:text-black/60 transition flex items-center gap-1">
             View All <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {newArrivals.map(product => (
